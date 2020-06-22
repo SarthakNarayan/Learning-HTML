@@ -2,7 +2,7 @@
     "editor.rulers": [],
 
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 78,
+    "editor.wordWrapColumn": 85,
     "editor.wrappingIndent": "same",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
