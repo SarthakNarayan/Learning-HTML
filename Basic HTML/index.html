@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the description of my website">
+    <meta name="keywords" content="html">
+    <meta name="robots" content="INDEX, FOLLOW">
+
+    <!-- Including external css -->
+    <!-- <link rel="stylesheet" href="name_sheet.css"> -->
+
+    <!-- Including external JS -->
+    <!-- <script src="name_file.js"></script> -->
+
+    <title>HTML cheatsheet</title>
+</head>
+
+<body>
+    <!-- Heading Tags -->
+    <h1>This is H1 we have till H6</h1>
+
+    <!-- strong means bold in HTML we can change its meaning when we use css-->
+    <!-- em is for italic -->
+    <!-- We can also use <b> but it is a good practice to use strong and em -->
+    <!-- target="_blank" means the browser will open the link in a new tab -->
+    <!-- <a> are known as anchor tags -->
+    <h1>Paragraphs with strong em and anchor tags</h1>
+    <p>
+        Lorem ipsum dolor
+        <strong>sit amet,</strong>
+        <em>consectetur adipisicing elit</em>. Dolorem similique nisi quaerat nam
+        <a href="https://www.google.com/" target="_blank">itaque</a> repellendus optio. Nostrum qui tenetur dicta iure
+        iste quaerat quibusdam sit amet molestiae maiores. Sint, totam.
+    </p>
+
+    <!-- Loading images, using emmet makes it very easy. Just type img and it will automatically show you different options  -->
+    <!-- Source unsplash is an api which makes sure you have a different image everytime you refresh the page -->
+    <!-- We can set width and height in the img tag itself but it is not a good practice -->
+    <!-- <img src="https://source.unsplash.com/1600x900/?nature,water" alt="Image format"> -->
+
+    <!-- There are 2 different types of lists -->
+    <h1>Types of lists</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <ol type="A">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+
+    <h1>Forms</h1>
+    Post is generally used for secure data like submitting to database whereas get is used for more unsecure data like
+    searches or something
+
+    <!-- div is a block element whereas normal forms are inline elements -->
+    <!-- Block element spans the whole width and the next element will come in next line only -->
+    <!-- So when you place forms without div they will come side by side -->
+    <!-- Name is basically a variable for accessing these form values in backend -->
+    <!-- Radio button values side by side means only one value can be selected -->
+    <!-- Use of label is that even if you click text it will select the input box -->
+    <!-- id name should be same as the for value -->
+    <form action="database.py">
+        Name: <input type="text" name="name">
+        Email: <input type="email" name="email">
+        <input type="button" value="Submit now">
+        <div>
+            Gender: Male <input type="radio" name="radio_but"> Female <input type="radio" name="radio_but"> Other <input
+                type="radio" name="radio_but">
+        </div>
+
+        <div>
+            <label for="text">Other</label>
+            <input type="text" name="name2" id="text">
+        </div>
+    </form>
+
+    <!-- p tag is a block element -->
+    <!-- span helps to write paragraph as inline element -->
+    <h1>Difference between inline and block elements</h1>
+    <p style="border: 2px salmon solid;">Lorem ipsum dolor sit.</p> <p style="border: 2px salmon solid;">Lorem ipsum dolor sit.</p>
+    <span style="border: 2px salmon solid;">Lorem ipsum dolor sit.</span> <span style="border: 2px salmon solid;">Lorem ipsum dolor sit.</span>
+
+    <!-- Use of id and class -->
+    <!-- Id should be unique for all div elements. Using this id we can target individual elements in JS -->
+    <!-- class helps to give same css styling to all those elements you can use ids as well if it is very particular-->
+    <!-- Only one id for an element but we can have multiple classes -->
+    <div id="uniquename" class="styling redBg blackBorder"></div>
+
+    <!-- Using emmet shortcuts . is for class and # is for id -->
+    <!-- This means h1.redBg.Black.White => <h1 class="redBg Black White"></h1>-->
+    <!-- We can also have both simultaneously h1.redBg.Black.White#yes => <h1 class="redBg Black White" id="yes"></h1> -->
+    <!-- Emmet takes div as default this means -->
+    <!-- .lar#yes => <div class="lar" id="yes"></div> -->
+
+    <!-- HTML entities -->
+    <!-- nbsp stands for non breaking space -->
+    <h1>HTML entities</h1>
+    <p>Lets write something. You cannot have &nbsp; multiple spaces without using nbsp. But it is not a good practice</p>
+</body>
+
+</html>
