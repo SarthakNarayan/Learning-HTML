@@ -1,0 +1,24 @@
+/* If I remove #first then my second heading will also be centered */
+h3#first,
+#add {
+  text-align: center;
+}
+
+/* one more thing to note is that . means you are targeting a class and # is for id whereas if you write it simply then you are targeting headers */
+.content {
+  text-align: justify;
+  font-size: 20px;
+}
+
+#btn{
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgb(197, 197, 214);
+  color: red;
+  font-weight: bold;
+}
+
+h2{
+  text-align: center;
+}

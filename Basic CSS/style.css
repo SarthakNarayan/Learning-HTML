@@ -1,0 +1,143 @@
+/* Difference between p.red and .red is that p.red will
+target red class of only paragraph whereas .red will target all
+red classes like header also */
+/* p.red {
+    color: red;
+} */
+
+/* Class selector */
+.red {
+  color: red;
+}
+.blue {
+  background-color: blue;
+}
+
+/* ID selector */
+/* . is used for classes and # is used for styling IDs */
+#green {
+  color: green;
+}
+
+/* Grouping selector */
+.p1,
+.p2,
+.p3 {
+  color: brown;
+}
+
+/* Fonts */
+.fonts {
+  font-family: cursive;
+  /* pixel is 96th of inch */
+  font-size: 23px;
+  font-weight: bold;
+}
+.span_f {
+  font-style: italic;
+  color: bisque;
+}
+
+.borders {
+  border: 5px red solid;
+}
+
+.image_bg {
+  height: 200px;
+  width: 500px;
+  border: 5px red solid;
+  background-image: url("https://static.toiimg.com/thumb/72975551.cms?width=200&height=100&imgsize=881753");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Suppose you fix a width and then change padding margin or border then the width will change. To keep the width constant irrespective of padding and margin we use box sizing */
+.box {
+  background-color: aqua;
+  border: 10px black solid;
+  padding: 20px;
+  margin: 10px auto;
+  width: 500px;
+  box-sizing: border-box;
+}
+
+/* This is a universal selector */
+/* We use this to have box sizing for all our elements and 0 padding and margin to begin with which we can override*/
+/* Caution this will also override the padding and margin present on headings */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Positioning of css elements */
+.container {
+  width: 100px;
+  margin: 10px 10px;
+  border: 2px red solid;
+  height: 1500px;
+}
+
+/* notice the difference between sticky and fixed */
+/* Sticky for nav bars and fixed for chat bare*/
+.positioning {
+  position: sticky;
+  top: 20px;
+}
+
+/* We flex the display of the container */
+.container_flex {
+  border: 5px red solid;
+  background-color: rgb(182, 182, 233);
+  margin: 5px auto;
+  padding: 10px;
+  display: flex;
+
+  /* To make the layouts responsive we set flex-wrap to wrap*/
+  /* By default flex-wrap is set to nowrap */
+  flex-wrap: wrap;
+
+  /* Alignment */
+  /* Justify content is for horizontal direction and align items is for vertical direction */
+  /* To center the content */
+  /* justify-content: center; */
+
+  /* To vertically center we use */
+  /* align-items: center; */
+}
+
+.item {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  border: 5px red solid;
+  background-color: rgb(207, 221, 203);
+  margin: 5px auto;
+  padding: 10px;
+}
+
+/* Flex box item properties */
+/* Flex items are arranged in ascending order of the order */
+/* Flex grow is for how the flex items expand */
+#item-1{
+  order: 10;
+}
+
+/* em units*/
+.container_size{
+  text-align: center;
+  border: 1em red solid;
+}
+
+/* Using rem units */
+#head1{
+  font-size: 3em;
+}
+
+.container_height{
+  height: 70vh;
+  width: 70vw;
+  border: 10px red solid;
+  margin:1em;
+}
+

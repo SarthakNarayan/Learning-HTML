@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking external style sheet -->
+    <!-- For emmet we use link:css -->
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Tutorials</title>
+</head>
+
+<body>
+    <!-- Learning selectors -->
+    <!-- Element, Class, ID and Grouping -->
+    <h3 class="red">CSS Tutorials</h3>
+    <p class="red blue">Lorem ipsum dolor sit amet.</p>
+    <p id="green">Lorem ipsum dolor sit amet.</p>
+    <p class="p1">Lorem ipsum dolor sit amet.</p>
+    <p class="p2">Lorem ipsum dolor sit amet.</p>
+    <p class="p3">Lorem ipsum dolor sit amet.</p>
+
+    <!-- Fonts -->
+    <!-- We can also target a particular word using span -->
+    <!-- We use span and not paragraph because span is an inline element and paragraph is not -->
+    <p class="fonts">Lorem ipsum dolor sit amet.</p>
+    <p class="fonts">Lorem ipsum <span class="span_f">dolor</span> sit amet.</p>
+
+    <!-- Making Borders -->
+    <!-- Using Images as background -->
+    <p class="borders">Lorem ipsum dolor sit.</p>
+    <p class="image_bg">Lorem ipsum dolor sit amet.</p>
+
+    <!-- Exploring the box model -->
+    <!-- Padding, Border and Margin -->
+    <p class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore exercitationem et repellendus hic
+        nisi totam quod ab porro doloribus dolor.</p>
+
+    <p class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore exercitationem et repellendus hic
+
+        <!-- Positions in CSS -->
+        <!-- Absolute wrt to Parent, Relative wrt to its position -->
+        <!-- Fixed and sticky are for keeping the objects fixed -->
+        <!-- <div class="container">
+        <p class="positioning">Position of this box</p>
+        </div> -->
+
+        <!-- Flex box tutorial -->
+        <!-- To make a container we flex the display of the container -->
+    <h1>Flex box tutorial</h1>
+    <div class="container_flex">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <div class="item" id="item-4">Fourth box</div>
+    </div>
+
+    <!-- Always a good practice to start with a container -->
+    <!-- em is a relative unit which means size is em times multiplied by the container size -->
+    <!-- So if the container is 5px and then 5em for units mean 25px  -->
+    <!-- rem is used when you want to resize wrt parent container and em is used wrt to an element -->
+    <div class="container_size">
+        <h1 id="head1">This is a heading for test</h1>
+        <h1 id="head2">This is a heading for test</h1>
+    </div>
+
+    <!-- Demonstrating to occupy complete width and height -->
+    <!-- This is also like percentage -->
+    <div class="container_height">
+        <h1>Demonstrating height</h1>
+    </div>
+</body>
+
+</html>
