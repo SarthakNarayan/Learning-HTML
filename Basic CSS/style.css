@@ -1,8 +1,16 @@
+/* --------------------------------SELECTORS--------------------------------------- */
+
 /* Difference between p.red and .red is that p.red will
 target red class of only paragraph whereas .red will target all
 red classes like header also */
+/* color: red means property: value */
 /* p.red {
     color: red;
+} */
+
+/* Element selector */
+/* p {
+  color: red;
 } */
 
 /* Class selector */
@@ -25,6 +33,26 @@ red classes like header also */
 .p3 {
   color: brown;
 }
+
+/*  Order of priority 
+    That is if these selectors are present what will happen
+    Element < Class < ID < Inline 
+    But it is not recommended to use inline styling
+*/
+
+/*  Pseudo selectors
+    These are generally used with anchor tags  */
+.red:hover {
+  color: white;
+}
+
+/*  There are attribute and advanced selectors also but most of the work can be done using  these selectors */
+
+/* in colors we also have the term opacity we can specify colors using rgba(,,,0-1)
+   this is better than changing colors since in transitions you mainly change the 
+   alpha value rather than the color each and every time */
+
+/* --------------------------------SELECTORS--------------------------------------- */
 
 /* Fonts */
 .fonts {
@@ -49,16 +77,29 @@ red classes like header also */
   background-image: url("https://static.toiimg.com/thumb/72975551.cms?width=200&height=100&imgsize=881753");
   background-repeat: no-repeat;
   background-position: center center;
+  /* To cover the background with the image we use
+     This will compromise on quality */
+  background-size: cover;
 }
 
 /* Suppose you fix a width and then change padding margin or border then the width will change. To keep the width constant irrespective of padding and margin we use box sizing */
 .box {
-  background-color: aqua;
+  /* background-color: aqua; */
+  /* You can add multiple colors  */
+  background: linear-gradient(to right, green, yellow);
+  /* To make diagonal gradients */
+  background: linear-gradient(to bottom right, green, yellow);
+  /* We can also use angles to make them end at a specific place */
+  background: linear-gradient(56deg, green, yellow);
+  /* There is radial gradients also but I don't like it */
   border: 10px black solid;
   padding: 20px;
+  /* general convention of sizing is to have widths in % */
   margin: 10px auto;
   width: 500px;
   box-sizing: border-box;
+  /* Display is used to remove any element without taking any space */
+  display: none;
 }
 
 /* This is a universal selector */
@@ -119,25 +160,24 @@ red classes like header also */
 /* Flex box item properties */
 /* Flex items are arranged in ascending order of the order */
 /* Flex grow is for how the flex items expand */
-#item-1{
+#item-1 {
   order: 10;
 }
 
 /* em units*/
-.container_size{
+.container_size {
   text-align: center;
   border: 1em red solid;
 }
 
 /* Using rem units */
-#head1{
+#head1 {
   font-size: 3em;
 }
 
-.container_height{
+.container_height {
   height: 70vh;
   width: 70vw;
   border: 10px red solid;
-  margin:1em;
+  margin: 1em;
 }
-
