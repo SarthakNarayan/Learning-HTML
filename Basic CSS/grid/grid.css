@@ -1,0 +1,97 @@
+/* setting margin and padding to 0 in the beginning */
+* {
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  overflow-x: hidden;
+}
+/* Adding media queries to grid for responsive web design */
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .container-grid {
+    overflow-x: hidden;
+    display: grid;
+    font-size: 30px;
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      "main1 main1 main1 main1"
+      "main2 main2 main2 main2"
+      "main3 main3 main3 main3"
+      "footer footer footer footer";
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container-grid {
+    display: grid;
+    font-size: 30px;
+    grid-template-areas:
+      "navbar navbar navbar navbar navbar"
+      "sidebar main1 main1 main1 main1"
+      "sidebar main2 main2 main2 main2"
+      "sidebar main3 main3 main3 main3"
+      "footer footer footer footer footer";
+  }
+}
+.navbar {
+  text-align: center;
+  background-color: rgb(228, 171, 171);
+  color: rgb(0, 0, 0);
+  /* This means starting from column 1 span 2 blocks which means go till row 2 */
+  padding: 10px;
+  grid-area: navbar;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+}
+.main-1 {
+  text-align: center;
+  background-color: rgb(238, 238, 181);
+  color: rgb(0, 0, 0);
+  height: 300px;
+
+  grid-area: main1;
+}
+.main-2 {
+  text-align: center;
+  background-color: rgb(184, 184, 221);
+  color: rgb(0, 0, 0);
+  height: 300px;
+
+  grid-area: main2;
+}
+.main-3 {
+  text-align: center;
+  background-color: rgb(240, 196, 240);
+  color: rgb(0, 0, 0);
+  height: 300px;
+
+  grid-area: main3;
+}
+.left-side-bar {
+  text-align: center;
+  background-color: rgb(207, 184, 140);
+  color: rgb(0, 0, 0);
+  /* height: 500px; */
+
+  grid-area: sidebar;
+}
+
+/* Also if a font size is specified for a container then the element can overwrite it by defining it in its class */
+/* Example of font size in footer */
+.footer {
+  text-align: center;
+  background-color: rgb(169, 228, 169);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 40px;
+  grid-area: footer;
+}
+
+/* I created this test id in footer to show two things */
+/* If you have different properties targeted in id and class of the same element then both of them will work but if a property clashes then id will be given preference */
+#test {
+  font-family: sans-serif;
+  /* font-size: 25px; */
+  color: white;
+}

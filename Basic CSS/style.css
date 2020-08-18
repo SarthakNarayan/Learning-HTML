@@ -160,8 +160,12 @@ red classes like header also */
 /* Flex box item properties */
 /* Flex items are arranged in ascending order of the order */
 /* Flex grow is for how the flex items expand */
+/* Flex grow, basis and shrink are used in items of the flex box */
+/* Individual elements can be placed anywhere using elf align but this overrides
+   overrides align items */
 #item-1 {
   order: 10;
+  align-self: flex-start;
 }
 
 /* em units*/
@@ -180,4 +184,147 @@ red classes like header also */
   width: 70vw;
   border: 10px red solid;
   margin: 1em;
+}
+
+/* Experimenting with grid */
+/* Setting the grid container */
+/* In short Grid has more control over layout than flexbox */
+.container-grid {
+  display: grid;
+  margin: 10px;
+  /* grid-template-columns: auto auto;
+  grid-template-rows: auto auto; */
+  /* justify-content: start; is used for aligning horizontally */
+  /* align-content: ; is for vertical alignment */
+}
+#item-1-grid {
+  background-color: bisque;
+  /* width: 70%; */
+  margin: 5px;
+  grid-row-start: 1;
+  grid-row-end: span 5;
+}
+#item-2-grid {
+  background-color: blue;
+  margin: 5px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* grid-row-start: 1;
+  grid-row-end: span 2; */
+  /* width: 20%; */
+}
+#item-3-grid {
+  background-color: lightcoral;
+  margin: 5px;
+  /* width: 20%; */
+}
+#item-4-grid {
+  background-color: magenta;
+  margin: 5px;
+  /* width: 20%; */
+  grid-column: 2/2;
+}
+
+.container-media {
+  text-align: center;
+  font-size: 30px;
+  border: 5px red solid;
+  margin-bottom: 20px;
+}
+
+/* Three different cases */
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  .media {
+    color: red;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .media {
+    color: green;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .media {
+    color: blue;
+  }
+}
+
+/* Using variables */
+.variables {
+  text-align: center;
+  font-size: 30px;
+  border: 5px red solid;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+:root {
+  --back-color: yellow;
+}
+.para1 {
+  --text-color: red;
+  color: var(--text-color);
+  background-color: var(--back-color);
+}
+.para2 {
+  background-color: var(--back-color);
+}
+
+/* Using animation */
+.animation {
+  text-align: center;
+  font-size: 30px;
+  border: 5px red solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation-name: sarthak;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  /* if you want to keep your to part in your style */
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  /* animation-delay: 3s; is for having a delay before starting the animation */
+}
+
+@keyframes sarthak {
+  from {
+    font-size: 10px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+/* Transitions */
+.transitions {
+  text-align: center;
+  font-size: 20px;
+  border: 5px red solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: aqua;
+  /* We can make transition-property: all; to transition multiple properties */
+  /* Hover only makes it change whereas transition gives it a smooth flow */
+  transition-property: background-color;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+}
+
+/* not ideal for mobile devices since you don't have hover */
+.transitions:hover{
+  background-color: blueviolet;
+}
+
+/* Transforms */
+.transforms {
+  text-align: center;
+  font-size: 20px;
+  border: 5px red solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 2s ease-in-out;
+}
+
+.transforms:hover{
+  transform: scale(2);
 }

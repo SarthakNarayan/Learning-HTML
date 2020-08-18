@@ -49,6 +49,7 @@ I have other extensions as well but I feel it is always a good idea to disable t
 | Markdown Preview |       CTRL + K, V       |
 |  Spell Checker   | CTRL + . (on that word) |
 
+
 # Learning-HTML-CSS-JS
 
 This repository is for learning HTML, CSS and JS basics. This will also serve as reading material learnt from tutorials. HTML is nothing but markup and all the styling is taken care by CSS. Logic part is taken care by JavaScript.
@@ -100,7 +101,21 @@ Class names need not be unique but id should be unique. Example a nav bar should
 
 ![image](images/image13.png)
 
-[Reference](https://www.youtube.com/watch?v=yfoY53QXEnI)
+Difference between flexbox and grid
+![image](images/image14.png)
+
+Excellent [tutorial](https://www.youtube.com/watch?v=RSIclWvNTdQ) on where to use grid and where to use flexbox. In a nutshell it is easy to design websites using grid and we use flexbox for 1D elements rather than 2D. \
+To create grid like structure using flexbox we use flexbox inside a flexbox.
+So if you think about it flexbox and grid are the reasons why you need parent containers. Let us take the example of 1:2 design using flexbox. We create an outer container and use flexbox to divide them into 2 parts. The second divided part has its contents inside a container. We now use flexbox on this container and divide them vertically. \
+Excellent [video](https://www.youtube.com/watch?v=k32voqQhODc) showing the use case of flexbox
+
+## UI design basics
+- Don't use too many colors
+- Always check the contrast ratio for producing readable content
+- Montserrat font or sans serif. Try to avoid times new roman. Also don't mix fonts
+
+References
+- [Link 1](https://www.youtube.com/watch?v=0JCUH5daCCE)
 
 # Notes JS
 
