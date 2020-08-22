@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-boxcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* default */
+  align-items: stretch;
+  margin:20px
+}
+
+.flex-box {
+  background-color: #333333;
+  color: white;
+  /* Since this applies for all the item classes giving it a flex of 1 
+  will mean we want to give equal spacing to all.
+  However we can change that by giving individual flex values to different 
+  classes */
+  /* flex: 1; */
+}
+
+/* Created a grid like layout using flexbox */
+.item-1 {
+  flex: 2;
+  /* Higher the order later the element will appear */
+  order: 3;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.item-2 {
+  flex: 3;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.item-3 {
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}

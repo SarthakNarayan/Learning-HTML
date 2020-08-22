@@ -1,4 +1,202 @@
-/* CSS Variables */
-:root{
+/* Not responsive since I have not added media queries */
 
+/* Go to google fonts to get this font */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #cccccc;
+}
+
+img {
+  max-width:100%;
+  /* max-height:100%; */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #eeeeee;
+  text-decoration: none;
+  background-color: #333333;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #eeeeee;
+  color: #333333;
+}
+
+.btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Outer container layout */
+.wrapper {
+  /* 20px is for top and bottom and auto is for left and right
+    auto is very important if you want to center the container */
+  margin: 30px auto;
+  max-width: 1000px;
+  /* If you don't set width to 90% then when the size becomes 
+       less than max-width then the letter start touching the margins */
+  width: 90%;
+}
+
+/* Navigation bar */
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-nav a:hover {
+  background-color: #333333;
+  color: #eeeeee;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Showcase section */
+.top-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "showcase top-box-a"
+    "showcase top-box-b";
+  margin-bottom: 20px;
+}
+
+.showcase {
+  min-height: 500px;
+  background: url("./images/img2.jpg") no-repeat center center/cover;
+  grid-area: showcase;
+  padding: 3em;
+
+  /* Flex properties
+       Used to center the items */
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.showcase h1 {
+  color: #dddddd;
+  font-size: 3em;
+}
+
+.showcase p {
+  color: white;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.top-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.top-box h4 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.price {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.top-box-a {
+  background-color: #dddddd;
+  grid-area: top-box-a;
+  min-width: 200px;
+}
+
+.top-box-b {
+  background-color: #dddddd;
+  grid-area: top-box-b;
+  min-width: 200px;
+}
+
+.boxes {
+  display: grid;
+  margin-bottom: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dddddd;
+}
+
+.box i {
+  margin: 10px;
+}
+.box p {
+  margin: 10px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #dddddd;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+  height: 10%;
+}
+
+.info img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  height: 500px;
+  width: 600px
+}
+
+.info-inner {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-inner p {
+  margin: 20px;
+}
+
+.portfolio{
+    display: grid;
+    /* automatically moves the elements of grid depending on width of the browser */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+footer{
+    margin-top: 20px;
+    color: #eeeeee;
+    padding: 20px;
+    background-color: #333333;
+    text-align: center;
 }

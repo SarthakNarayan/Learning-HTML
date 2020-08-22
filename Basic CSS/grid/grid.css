@@ -1,153 +1,26 @@
-/* setting margin and padding to 0 in the beginning */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body {
-  overflow-x: hidden;
-}
-/* Adding media queries to grid for responsive web design */
-@media only screen and (min-width: 0px) and (max-width: 800px) {
-  .container-grid {
-    overflow-x: hidden;
-    display: grid;
-    font-size: 30px;
-    grid-template-areas:
-      "navbar navbar navbar navbar"
-      "main1 main1 main1 main1"
-      "main2 main2 main2 main2"
-      "main3 main3 main3 main3"
-      "footer footer footer footer";
-    /* autofit with minmax is best for image galleries in grid */
-    /* Grid auto rows is used when the number of rows increases */
-  }
-  .navbar {
-    text-align: center;
-    background-color: rgb(228, 171, 171);
-    color: rgb(0, 0, 0);
-    /* This means starting from column 1 span 2 blocks which means go till row 2 */
-    padding: 10px;
-    grid-area: navbar;
-    position: sticky;
-    top: 0;
-    width: 100vw;
-    font-size: 0.7em;
 
-    display: flex;
-    /* flex-direction:  row; is by default*/
-    /* justify-content: centre; to align the items horizontally*/
-    flex-direction:column ;
-    justify-content: center;
-    align-items: center;
-  }
-  #Contact {
-    padding-right: 0px;
-  }
-}
-
-.container-grid {
+.grid-container {
+  margin: 20px;
+  font-size: 1.2em;
   display: grid;
-  font-size: 30px;
-  width: 100vw;
-  grid-template-areas:
-    "navbar navbar navbar navbar navbar"
-    "sidebar main1 main1 main1 main1"
-    "sidebar main2 main2 main2 main2"
-    "sidebar main3 main3 main3 main3"
-    "footer footer footer footer footer";
-  /* Vertically */
-  /* align-self: baseline; */
-  /* Along the column */
-  /* justify-items: ; */
-  /* for individual items it i align-self and justify-self: ;; */
-  /* Add this to the respective block */
+  grid-template-columns: repeat(4, 1fr);
+  /* This will automatically fill the rows 
+  we define the minimum size to be 150px and auto
+  means fill up till the content is present*/
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 20px;
+  justify-content: center;
+  align-content: center;
 }
 
-/* This contains the flex box */
-.navbar {
-  text-align: center;
-  background-color: rgb(228, 171, 171);
-  color: rgb(0, 0, 0);
-  /* This means starting from column 1 span 2 blocks which means go till row 2 */
-  padding: 10px;
-  grid-area: navbar;
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  font-size: 0.7em;
-
-  display: flex;
-  /* flex-direction:  row; is by default*/
-  /* justify-content: centre; to align the items horizontally*/
-  justify-content: flex-end;
-  align-items: center;
+.grid-items{
+    background-color: #333333;
+    color: white;
 }
 
-.navbar-item {
-  text-decoration: none;
-  margin: 10px;
-}
-#Contact {
-  padding-right: 20px;
-}
-.navbar-item:hover {
-  color: red;
-}
-/* .navbar-item:visited{
-  color:black
-} */
-.navbar-item:link {
-  color: blue;
-}
-
-.main-1 {
-  text-align: center;
-  background-color: rgb(238, 238, 181);
-  color: rgb(0, 0, 0);
-  height: 300px;
-
-  grid-area: main1;
-}
-.main-2 {
-  text-align: center;
-  background-color: rgb(184, 184, 221);
-  color: rgb(0, 0, 0);
-  height: 300px;
-
-  grid-area: main2;
-}
-.main-3 {
-  text-align: center;
-  background-color: rgb(240, 196, 240);
-  color: rgb(0, 0, 0);
-  height: 300px;
-
-  grid-area: main3;
-}
-.left-side-bar {
-  text-align: center;
-  background-color: rgb(207, 184, 140);
-  color: rgb(0, 0, 0);
-  /* height: 500px; */
-
-  grid-area: sidebar;
-}
-
-/* Also if a font size is specified for a container then the element can overwrite it by defining it in its class */
-/* Example of font size in footer */
-.footer {
-  text-align: center;
-  background-color: rgb(169, 228, 169);
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  font-size: 40px;
-  grid-area: footer;
-}
-
-/* I created this test id in footer to show two things */
-/* If you have different properties targeted in id and class of the same element then both of them will work but if a property clashes then id will be given preference */
-#test {
-  font-family: sans-serif;
-  /* font-size: 25px; */
-  color: white;
-}
+/* For grid template areas see the project */

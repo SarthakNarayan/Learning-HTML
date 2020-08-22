@@ -104,18 +104,41 @@ Class names need not be unique but id should be unique. Example a nav bar should
 Difference between flexbox and grid
 ![image](images/image14.png)
 
-Excellent [tutorial](https://www.youtube.com/watch?v=RSIclWvNTdQ) on where to use grid and where to use flexbox. In a nutshell it is easy to design websites using grid and we use flexbox for 1D elements rather than 2D. \
+[Video](https://www.youtube.com/watch?v=RSIclWvNTdQ) on where to use grid and where to use flexbox. In a nutshell it is easy to design websites using grid and we use flexbox for 1D elements rather than 2D. \
 To create grid like structure using flexbox we use flexbox inside a flexbox.
-So if you think about it flexbox and grid are the reasons why you need parent containers. Let us take the example of 1:2 design using flexbox. We create an outer container and use flexbox to divide them into 2 parts. The second divided part has its contents inside a container. We now use flexbox on this container and divide them vertically. \
-Excellent [video](https://www.youtube.com/watch?v=k32voqQhODc) showing the use case of flexbox
+So if you think about it flexbox and grid are the reasons why you need parent containers. Let us take the example of 1:2 design using flexbox. We create an outer container and use flexbox to divide them into 2 parts. The second divided part has its contents inside a container. We now use flexbox on this container and divide them vertically. This is a hack and it is advised to use grid. \
+[Video](https://www.youtube.com/watch?v=k32voqQhODc) showing the use case of flexbox. \
+[Video](https://www.youtube.com/watch?v=-GR52czEd-0) on units such as em, rem, vh and vw \
+[Video](https://www.youtube.com/watch?v=Qf-wVa9y9V4) on display types (block, inline, inline-block, none, flex, grid). inline-block basically means it is inline but you can control its height and width unlike inline. \
+[Video](https://www.youtube.com/watch?v=jx5jmI0UlXU) on positioning in CSS
 
 ## UI design basics
 - Don't use too many colors
 - Always check the contrast ratio for producing readable content
 - Montserrat font or sans serif. Try to avoid times new roman. Also don't mix fonts
 
-References
-- [Link 1](https://www.youtube.com/watch?v=0JCUH5daCCE)
+# General Rules for building websites
+- These are not absolute rules and can be thought of as a guide
+- Always write the markup of a section first and then go for styling it
+- As soon as you complete a section you can go for styling
+## HTML
+- Set up the main div container/wrapper class in which you can have other div classes 
+- A nav-bar div class will generally have ul lists for links, a logo and either a search bar or some other items. This nav-bar div can be further subdivided into different types of divs depending upon the needs.
+- Once nav is done we use header tag for our hero and other stuff.
+- We use section tags for the main body
+
+## CSS
+- Always set box sizing to border box for all so that padding doesn't affect width. We also set padding and margin to 0.
+- We set the font family, color of text, background, font-size(by default 16px) and line height
+- We then generally style some common elements like links and buttons. We make text decoration as none and give them background color and hover effects and etc. We also take away the bullets of unordered list for our nav bar by setting list-style as none.
+- Then we target the main container class by defining the width and margin (generally auto so that it is evenly spaced from both sides). Generally you will give width as percentages and if the screen becomes too big then then might not look too well. So we generally set max-width in container also. 
+- For the navbar we use display as flex. We also make the ul of the navbar flex. Flex 1 means it will occupy the whole horizontal space. 
+- While styling the button class always add cursor so that whenever you hover over it you have a pointer. For hover it is best to change the opacity. Also declare the button as an inline element since you may change its height and width.
+- Images always go out of the container unless you set their width to be 100%.
+- To target something of a specific section section h3 {}
+- For images we generally use url() no-repeat center center/cover
+- The easiest way of centering something is using the flex box. Align and justify.
+- We can use transforms translate to move items here and there.
 
 # Notes JS
 
