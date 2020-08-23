@@ -5,6 +5,7 @@
 - All in one Markdown
 - Prettier - Code formatter
 - Code Spell Checker
+- Auto Rename Tag
 
 There is extensions.json file which will automatically suggest all the recommended extensions and give you an option of install all.
 I have other extensions as well but I feel it is always a good idea to disable those extensions for a particular workspace where you are not using them.
@@ -143,4 +144,9 @@ So if you think about it flexbox and grid are the reasons why you need parent co
 # Notes JS
 
 Installing node [link](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) on Ubuntu 18.04
+
+# Notes React 
+![image](images/image15.png)
+![image](images/image16.png)
+
 

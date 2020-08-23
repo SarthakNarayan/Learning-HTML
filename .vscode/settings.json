@@ -3,4 +3,6 @@
     "editor.wrappingIndent": "same",
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1,
+    // "editor.fontFamily": ""
+    "editor.fontLigatures": true
 }
